@@ -28,19 +28,11 @@
   footer {
     box-sizing: border-box;
     position: relative;
-    padding: 0 4.166vw;
   }
   .section3 {
     overflow: hidden;
     background-color: skyblue;
   }
-
-  footer {
-    width: 100%;
-    bottom: 0;
-    background-color: #293383;
-  }
-
   /* cover */
   .cover {
     width: 100%;
@@ -637,8 +629,9 @@
     transition: 0.5s;
     height: 0;
     opacity: 0;
-    padding: 100px 4.166vw;
-    box-sizing: border-box;
+    padding: 0px 4.166vw;
+    width: 100%;
+    bottom: 0;
   }
   .footer__left {
     width: 100%;
@@ -728,6 +721,8 @@
   footer.active {
     height: 100vh;
     opacity: 1;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   .close__btn {
     display: none;

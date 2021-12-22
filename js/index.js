@@ -386,3 +386,6 @@ if (window.innerWidth > 1201) {
   imgChanger;
   //~634
 }
+window.addEventListener("scroll", () => {
+  console.log(body.scrollTop, body.scrollHeight);
+});
