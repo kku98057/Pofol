@@ -170,9 +170,19 @@ function footerEvent() {
     }
   });
 }
+function footerEvent() {
+  window.addEventListener("wheel", () => {
+    if (bodyHeight < window.scrollY + 20) {
+      footer.classList.add("active");
+      footerTimeline();
+    } else {
+      footer.classList.remove("active");
+    }
+  });
+}
 function mobFooterEvent() {
   window.addEventListener("wheel", () => {
-    if (bodyHeight < window.scrollY + 40) {
+    if (bodyHeight < window.scrollY + 50) {
       footer.classList.add("active");
       mobFooterTimeline();
     } else {
@@ -369,10 +379,10 @@ if (window.innerWidth > 1201) {
   //1200~
 } else if (window.innerWidth >= 635 && 1200 >= window.innerWidth) {
   //635~1200
-  footerEvent();
+  mobFooterEvent();
   imgChanger();
 } else if (window.innerWidth <= 634) {
-  footerEvent();
+  mobFooterEvent();
   imgChanger;
   //~634
 }

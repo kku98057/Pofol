@@ -532,7 +532,6 @@
   /* section5 */
   .section5 {
     width: 100%;
-    padding: 300px 0;
     box-sizing: border-box;
     transform-style: preserve-3d;
     perspective: 1200px;

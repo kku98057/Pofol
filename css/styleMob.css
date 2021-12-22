@@ -638,6 +638,7 @@
     height: 0;
     opacity: 0;
     padding: 100px 4.166vw;
+    box-sizing: border-box;
   }
   .footer__left {
     width: 100%;
