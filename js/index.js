@@ -324,13 +324,13 @@ $(document).ready(function () {
         slideMenu = "JODOR";
       }
       if (i == 2) {
-        slideMenu = "posco";
+        slideMenu = "POSCO";
       }
       if (i == 3) {
-        slideMenu = "Binggrae";
+        slideMenu = "BINGGRAE";
       }
       if (i == 4) {
-        slideMenu = "pik-a-fla";
+        slideMenu = "PIK-A-FLA";
       }
       return `<button class="slideMenu slideMenu${i}"><span>${slideMenu}</span></button>`;
     },
