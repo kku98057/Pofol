@@ -64,8 +64,9 @@ function mouseMonve() {
 }
 // 마우스 아웃
 function mouseLeave() {
-  card.addEventListener("mouseleave", () => {
-    card.style.trnasform = `rotate(0)`;
+  card.addEventListener("mouseout", () => {
+    card.style.transform = `rotateX(0) rotateY(0)`;
+    console.log("23234");
   });
 }
 
@@ -144,6 +145,11 @@ coverBtn.addEventListener("click", () => {
   cover.classList.toggle("active");
   tl1.seek();
 });
+function pcCoverStop() {
+  window.addEventListener("scroll", () => {
+    tl1.seek();
+  });
+}
 // footer 나타나기
 function footerEvent() {
   window.addEventListener("wheel", () => {
@@ -361,6 +367,7 @@ nav.addEventListener("click", (e) => {
 if (window.innerWidth > 1201) {
   imgChanger();
   footerEvent();
+  pcCoverStop();
   //1200~
 } else if (window.innerWidth >= 635 && 1200 >= window.innerWidth) {
   //635~1200
