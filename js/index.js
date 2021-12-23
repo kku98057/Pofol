@@ -1,7 +1,3 @@
-window.addEventListener("beforeunload", () => {
-  window.scrollTo(0, 0);
-});
-
 // 커서-
 
 const cursor1 = document.querySelector(".cursor1");
