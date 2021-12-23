@@ -480,7 +480,7 @@
     box-sizing: border-box;
     position: absolute;
     bottom: 50px;
-    font-size: 3em;
+    font-size: 2.5em;
     color: var(--font-white-color);
     font-family: var(--font-noto);
   }
