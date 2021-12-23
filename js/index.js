@@ -244,7 +244,7 @@ gsap.to(".section3__cloud", {
     scrub: 3,
     pin: true,
   },
-  transformX: 10,
+  xPercent: 100,
 });
 
 tl2
