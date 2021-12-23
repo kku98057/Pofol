@@ -33,25 +33,14 @@ function cursorHover() {
     a.addEventListener("mouseenter", () => {
       cursor1.classList.add("active");
       cursor2.classList.add("active");
+      cursor1.innerText = "Click!";
     });
   });
   aTag.forEach((a) => {
     a.addEventListener("mouseleave", () => {
       cursor1.classList.remove("active");
       cursor2.classList.remove("active");
-    });
-  });
-
-  spanTag.forEach((b) => {
-    b.addEventListener("mouseenter", () => {
-      cursor1.classList.add("active");
-      cursor2.classList.add("active");
-    });
-  });
-  spanTag.forEach((b) => {
-    b.addEventListener("mouseleave", () => {
-      cursor1.classList.remove("active");
-      cursor2.classList.remove("active");
+      cursor1.innerText = "";
     });
   });
 }
