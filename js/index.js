@@ -308,13 +308,13 @@ $(document).ready(function () {
       let slideMenu = "";
 
       if (i == 0) {
-        slideMenu = "MU";
+        slideMenu = "POSCO";
       }
       if (i == 1) {
         slideMenu = "JODOR";
       }
       if (i == 2) {
-        slideMenu = "POSCO";
+        slideMenu = "MU";
       }
       if (i == 3) {
         slideMenu = "BINGGRAE";
