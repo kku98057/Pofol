@@ -579,13 +579,10 @@
     opacity: 0;
     margin-bottom: 50px;
     cursor: pointer;
-    filter: grayscale(1);
+
     transition: all 0.5s;
   }
 
-  .stack__ul-list:hover {
-    filter: grayscale(0);
-  }
   .stack__ul-list img {
     width: 100%;
     height: 100%;

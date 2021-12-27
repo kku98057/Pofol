@@ -374,6 +374,21 @@ if (window.innerWidth > 1201) {
   imgChanger();
 } else if (window.innerWidth <= 634) {
   mobFooterEvent();
-  imgChanger;
+  imgChanger();
   //~634
 }
+
+// 리사이즈
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 1201) {
+    footerEvent();
+    cardEvent();
+    //1200~
+  } else if (window.innerWidth >= 635 && 1200 >= window.innerWidth) {
+    //635~1200
+    mobFooterEvent();
+  } else if (window.innerWidth <= 634) {
+    mobFooterEvent();
+    //~634
+  }
+});
