@@ -66,7 +66,6 @@ function mouseMonve() {
 function mouseLeave() {
   card.addEventListener("mouseout", () => {
     card.style.transform = `rotateX(0) rotateY(0)`;
-    console.log("23234");
   });
 }
 
@@ -190,7 +189,6 @@ function imgChange() {
   if (imgNub < 6) {
     footerImg.setAttribute("src", `img/slide0${imgNub}.jpg`);
     imgNub++;
-    console.log("1");
   } else {
     imgNub = 1;
   }
@@ -349,7 +347,6 @@ const move = function move(selector) {
 leftUl.addEventListener("click", (event) => {
   const leftULTarget = event.target;
   const leftData = leftULTarget.dataset.link;
-  console.log(leftULTarget);
   move(leftData);
 });
 
@@ -380,6 +377,3 @@ if (window.innerWidth > 1201) {
   imgChanger;
   //~634
 }
-window.addEventListener("scroll", () => {
-  console.log(body.scrollTop, body.scrollHeight);
-});
