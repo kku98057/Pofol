@@ -474,7 +474,6 @@ function section6Ani() {
   gsap.to(".section6__contact", {
     scrollTrigger: {
       trigger: ".section6__container",
-      markers: true,
       start: "0 100%",
       end: "center 60%",
       toggleActions: "play none play reset",
