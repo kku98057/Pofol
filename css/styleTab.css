@@ -146,13 +146,13 @@
     padding: 0 4.166vw;
     height: 16vw;
     overflow: hidden;
-    font-size: 1vw;
+    font-size: 3vw;
     position: relative;
     display: flex;
     align-items: center;
   }
   .logo {
-    font-size: 5em;
+    font-size: 1em;
     display: inline-block;
     position: relative;
     left: 0;
@@ -161,8 +161,8 @@
   }
   .nav {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%;
+    transform: translate(-110%, -50%);
     display: none;
   }
   .nav li {
@@ -544,13 +544,17 @@
     width: 100%;
     height: 100%;
   }
+
   .section5__info {
     box-sizing: border-box;
     width: 100%;
     padding: 0 4.166vw;
     box-sizing: border-box;
   }
-
+  .section5__info-stack,
+  .section5__info-introduce {
+    transform: translateX(110%);
+  }
   .introduce__about {
     font-size: 3rem;
     margin-bottom: 50px;
@@ -575,20 +579,20 @@
     justify-content: space-between;
   }
   .stack__ul-list {
-    width: 20vw;
-    height: 20vw;
-
+    width: 25%;
+    height: 100px;
     margin-bottom: 50px;
     cursor: pointer;
     filter: grayscale(1);
     transition: all 0.5s;
+    opacity: 0;
   }
 
   .stack__ul-list:hover {
     filter: grayscale(0);
   }
   .stack__ul-list img {
-    width: 100%;
+    width: 100px;
     height: 100%;
   }
   .stack__ul-list:nth-child(4),
@@ -612,6 +616,7 @@
   .section6__contact {
     font-size: 1vw;
     margin-bottom: 50px;
+    opacity: 0;
   }
   .section6__contact-h {
     font-size: 8em;
@@ -674,7 +679,7 @@
   }
 
   .footer__right-text {
-    width: 42.74vw;
+    width: 43.74vw;
     font-size: 1vw;
     overflow: hidden;
   }

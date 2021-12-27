@@ -5,12 +5,14 @@ const tl1 = gsap.timeline();
 //     coverAni();
 //   } else if (window.innerWidth >= 635 && 1200 >= window.innerWidth) {
 //     //635~1200
-//     // tabCoverAni();
+//     tabCoverAni();
 //   } else if (window.innerWidth <= 634) {
 //     //~634
 //     mobCoverAni();
 //   }
 // });
+
+// cover animation
 function coverAni() {
   tl1
     .from(".cover__icon i", {
@@ -242,7 +244,7 @@ function coverAni() {
     .to(
       ".logo",
       {
-        translateY: 0,
+        translateX: 0,
       },
       "-=1"
     )
@@ -254,10 +256,10 @@ function coverAni() {
       },
       "-=1"
     )
-    .from(
+    .to(
       ".nav",
       {
-        xPercent: -200,
+        translateX: 0,
       },
       "-=0.5"
     )
@@ -323,10 +325,10 @@ function mobCoverAni() {
       yPercent: -300,
       duration: 1.5,
     })
-    .from(
+    .to(
       ".logo",
       {
-        translateX: -200,
+        translateX: 0,
       },
       "-=1"
     )
@@ -338,10 +340,10 @@ function mobCoverAni() {
       },
       "-=1"
     )
-    .from(
+    .to(
       ".nav",
       {
-        xPercent: -200,
+        translateX: 0,
       },
       "-=0.5"
     )
@@ -421,10 +423,10 @@ function tabCoverAni() {
       },
       "-=1"
     )
-    .from(
+    .to(
       ".nav",
       {
-        xPercent: -200,
+        translateX: 0,
       },
       "-=0.5"
     )
@@ -432,14 +434,72 @@ function tabCoverAni() {
       display: "none",
     });
 }
+
+// section5 animation
+
+function section5Ani() {
+  gsap.to(
+    ".section5__img img, .section5__info-introduce, .section5__info-stack",
+    {
+      scrollTrigger: {
+        trigger: ".section5",
+        start: "10% 100%",
+        end: "100% 0%",
+        toggleActions: "play reset play reset",
+      },
+      translateX: 0,
+      duration: 1,
+      stagger: 0.1,
+    }
+  );
+}
+function stackAni() {
+  gsap.to(".stack__ul-list", {
+    scrollTrigger: {
+      trigger: ".stack__ul",
+      start: `0% 100%`,
+      end: `30% center`,
+      toggleActions: "play reset play reset",
+      scrub: true,
+    },
+    opacity: 1,
+    duration: 0.3,
+    stagger: 0.1,
+  });
+}
+
+// section6 animation
+
+function section6Ani() {
+  gsap.to(".section6__contact", {
+    scrollTrigger: {
+      trigger: ".section6__container",
+      markers: true,
+      start: "0 100%",
+      end: "center 60%",
+      toggleActions: "play none play reset",
+    },
+    opacity: 1,
+    duration: 1,
+  });
+}
 if (window.innerWidth > 1201) {
   //1200~
+  section6Ani();
+  section5Ani();
+  stackAni();
   coverAni();
 } else if (window.innerWidth >= 635 && 1200 >= window.innerWidth) {
   //635~1200
   tabCoverAni();
+  section6Ani();
+  section5Ani();
+  stackAni();
 } else if (window.innerWidth <= 634) {
   //~634
   mobCoverAni();
+  section6Ani();
+  section5Ani();
+  stackAni();
 }
 // footer aniamtion

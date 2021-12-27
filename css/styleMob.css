@@ -143,17 +143,17 @@
     align-items: center;
   }
   .logo {
-    font-size: 5em;
+    font-size: 1.2rem;
     display: inline-block;
     position: relative;
-    left: 0;
+    transform: translateX(-200%);
     transition: color 0.5s;
     color: var(--font-black-color);
   }
   .nav {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%;
+    transform: translate(-200%, -50%);
     display: none;
   }
   .nav li {
@@ -200,10 +200,10 @@
     padding-left: 5.208vw;
     box-sizing: border-box;
     font-weight: 300;
-    font-size: 1vw;
+    font-size: 5vw;
   }
   .section1__text2 p {
-    font-size: 3em;
+    font-size: 1em;
   }
   .section1__scrolldown {
     position: absolute;
@@ -537,6 +537,11 @@
   .section5__img img {
     width: 100%;
     height: 100%;
+    transform: translateX(-110%);
+  }
+  .section5__info-introduce,
+  .section5__info-stack {
+    transform: translateX(110%);
   }
   .section5__info {
     box-sizing: border-box;
@@ -571,7 +576,7 @@
   .stack__ul-list {
     width: 20vw;
     height: 20vw;
-
+    opacity: 0;
     margin-bottom: 50px;
     cursor: pointer;
     filter: grayscale(1);
@@ -607,6 +612,7 @@
   .section6__contact {
     font-size: 1vw;
     margin-bottom: 50px;
+    opacity: 0;
   }
   .section6__contact-h {
     font-size: 8em;

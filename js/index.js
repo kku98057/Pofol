@@ -74,7 +74,6 @@ function cardEvent() {
   mouseMonve();
   mouseLeave();
 }
-cardEvent();
 
 // footer
 const section6 = document.querySelector(".section6");
@@ -117,13 +116,14 @@ function footerTimeline() {
 function mobFooterTimeline() {
   tl4
     .to(".left__ul-list", {
-      xPercent: 110,
+      translateX: 0,
       stagger: 0.3,
       opacity: 1,
     })
     .to(
       ".footer__right-img img",
       {
+        translateX: 0,
         opacity: 1,
       },
       "-=1"
@@ -131,6 +131,7 @@ function mobFooterTimeline() {
     .to(
       ".footer__right-text-text",
       {
+        translateX: 0,
         opacity: 1,
         stagger: 0.2,
       },
@@ -368,6 +369,7 @@ if (window.innerWidth > 1201) {
   imgChanger();
   footerEvent();
   pcCoverStop();
+  cardEvent();
   //1200~
 } else if (window.innerWidth >= 635 && 1200 >= window.innerWidth) {
   //635~1200
